@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cajero Bancario Inteligente</title>
+  <link rel="stylesheet" href="frontend.css">
+</head>
+<body>
+
+  <div class="cajero">
+    <h2>🏦 Cajero Bancario</h2>
+
+    <label for="operacion">Seleccione operación:</label>
+    <select id="operacion">
+      <option value="Deposito">Depósito</option>
+      <option value="Retiro">Retiro</option>
+    </select>
+
+    <label for="monto">Ingrese el monto ($):</label>
+    <input type="number" id="monto" min="1" placeholder="Ej: 100">
+    <button onclick="realizarOperacion()">Registrar operación</button>
+
+    <div class="resultados">
+      <p><strong>Total depositado:</strong> $<span id="totalDepositos">0</span></p>
+      <p><strong>Total retirado:</strong> $<span id="totalRetiros">0</span></p>
+      <p><strong>Saldo final:</strong> $<span id="saldo">0</span></p>
+    </div>
+
+    <div class="movimientos" id="movimientos"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
